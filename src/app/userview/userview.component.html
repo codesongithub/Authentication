@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <h2>People Details</h2>
+  <hr>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Name: <span style="color: rgb(132, 0, 255);">{{currentUserData.username}}</span></h5>
+      <hr>
+      <h6 class="card-subtitle mb-2 text-muted">Email ID: <span style="color:rgb(255, 0, 0);">{{currentUserData.email}}</span></h6>
+      <p class="card-text">Mobile No.: <span style="color:rgb(255, 0, 0);">{{currentUserData.mobile}}</span></p>
+      <hr style="color: rgb(255, 0, 0);">
+      <p class="card-text">Address: <span style="color:rgb(132, 0, 255);">{{currentUserData.address}}</span></p>
+    </div>
+  </div>
+  <br>
+<a routerLink="../../userlist"> <button class="btn btn-primary">Back to List</button></a>
+</div>

@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <a class="btn btn-primary" routerLink="../productcreate">Add More Products</a>
+  <br>
+  <hr>
+  <h2>Product List</h2>
+  <div class="row">
+      <div class="col-8">
+        <table class="table">
+          <thead class="thread-dark">
+            <tr>
+              <th scope="col">Product Name</th>
+              <th scope="col">Product Price</th>
+              <th scope="col">Discount</th>
+              <th scope="col">Type</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of productList">
+              <td>{{product.productname}}</td>
+              <td>{{product.productprice}}</td>
+              <td>{{product.discount}}</td>
+              <td>{{product.type}}</td>
+              <td>
+                <a [routerLink]="['/productedit',product.id]"><button class="btn btn-success">Edit</button></a>&nbsp;
+                <a [routerLink]="['/productview',product.id]"><button class="btn btn-dark">View</button></a>&nbsp;
+                <button (click)="deleteprod(product.id)" class="btn btn-danger">Delete</button>&nbsp;
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+ 
+</div>

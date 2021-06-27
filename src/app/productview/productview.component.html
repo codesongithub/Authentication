@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <h2>Product Details</h2>
+  <hr>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Product: <span style="color: rgb(132, 0, 255);">{{currentProductData.productname}}</span></h5>
+      <hr>
+      <h6 class="card-subtitle mb-2 text-muted">Price: <span style="color:rgb(255, 0, 0);">{{currentProductData.productprice}}</span></h6>
+      <p class="card-text">Discount: <span style="color:rgb(255, 0, 0);">{{currentProductData.discount}}</span></p>
+      <hr style="color: rgb(255, 0, 0);">
+      <p class="card-text">Type: <span style="color:rgb(132, 0, 255);">{{currentProductData.type}}</span></p>
+    </div>
+  </div>
+  <br>
+<a routerLink="../../productlist"> <button class="btn btn-primary">Back to List</button></a>
+</div>

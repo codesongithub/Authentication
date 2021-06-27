@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <h2>Add a Product</h2>
+  <hr>
+  <div class="row">
+      <div class="col-6">
+        <form [formGroup]="productForm" (ngSubmit)="submitForm()">
+          <div class="form-group">
+            <label for="">Product Name</label>
+            <input type="text" class="form-control" formControlName="productname" [ngClass]="{'form-error':productForm.get('productname').touched && productForm.get('productname').invalid}">
+          </div>
+          <div class="form-group">
+            <label for="">Price</label>
+            <input type="number" class="form-control"formControlName="productprice"[ngClass]="{'form-error':productForm.get('productprice').touched && productForm.get('productprice').invalid}">
+          </div>
+          <div class="form-group">
+            <label for="">Discount</label>
+            <input type="number" class="form-control" formControlName="discount"[ngClass]="{'form-error':productForm.get('discount').touched && productForm.get('discount').invalid}">
+          </div>
+          <div class="form-group">
+            <label for="">Type</label>
+            <select class="form-control" formControlName="type" [ngClass]="{'form-error':productForm.get('type').touched && productForm.get('type').invalid}">
+              <option value="Mobile">Mobile</option>
+              <option value="Laptop">Laptop</option>
+            </select>
+          </div><br>
+          
+          <input type="submit"[disabled]="!productForm.valid" class="btn btn-primary">
+          
+        </form>
+      </div>
+  </div>
+  <hr>
+  <h6>Don't want to add product now?</h6>
+          <a routerLink="../productlist"> <button class="btn btn-primary">Back to List</button></a>
+</div>
